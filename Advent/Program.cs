@@ -6,11 +6,11 @@ namespace Advent
     {
         static void Main(string[] args)
         {
-            IPuzzle puzzle = new RocketEquationAdvanced();
+            IPuzzle puzzle = new Alarm();
 
-            Console.WriteLine("====TEST====");
-            var testAnswer = puzzle.Solve(Resource.TestInput);
-            Console.WriteLine("Answer: " + testAnswer);
+            //Console.WriteLine("====TEST====");
+            //var testAnswer = puzzle.Solve(Resource.TestInput);
+            //Console.WriteLine("Answer: " + testAnswer);
 
             Console.WriteLine("====REAL====");
             var answer = puzzle.Solve(Resource.Input);
