@@ -2,6 +2,7 @@
 {
     public interface IPuzzle
     {
-        string Solve(string input);
+        string SolvePart1(string input);
+        string SolvePart2(string input);
     }
 }
