@@ -54,27 +54,26 @@ namespace Advent
                     }
             }
 
-            PrintImageToFile(width, height, finalImage, @"C:\Development\AdventOfCode2019\message.bmp");
+            PrintImageToConsole(width, height, finalImage);
             
-            return "JAFRA"; //manually read from image
+            return "JAFRA"; //manually read from console
         }
 
-        private void PrintImageToFile(int width, int height, byte[] finalImage, string path)
+        private void PrintImageToConsole(int width, int height, byte[] finalImage)
         {
-            var bmp = new Bitmap(width, height);
             var counter = 0;
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
                     if (finalImage[counter] == 1)
-                        bmp.SetPixel(j, i, Color.Black);
+                        Console.Write("#");
                     else
-                        bmp.SetPixel(j, i, Color.White);
+                        Console.Write(" ");
                     counter++;
                 }
+                Console.WriteLine();
             }
-            bmp.Save(path);
         }
     }
 }
